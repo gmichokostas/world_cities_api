@@ -7,4 +7,5 @@ gem 'rake'
 
 group :development do
   gem 'thin'
+  gem 'rerun'
 end
