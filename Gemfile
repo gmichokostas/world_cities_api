@@ -11,3 +11,12 @@ group :development do
   gem 'rerun'
   gem 'dm-sqlite-adapter'
 end
+
+group :test do
+  gem 'rack-test'
+  gem 'rspec'
+  gem 'byebug'
+  gem 'dm-sqlite-adapter'
+end
+
+gem 'dm-postgres-adapter', group: :production
