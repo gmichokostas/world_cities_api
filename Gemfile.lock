@@ -70,7 +70,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     multi_json (1.11.2)
-    pg (0.18.3)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -115,7 +114,6 @@ DEPENDENCIES
   datamapper
   dm-postgres-adapter
   dm-sqlite-adapter
-  pg
   rack
   rack-test
   rake
