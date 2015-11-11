@@ -1,7 +1,9 @@
-require 'rspec/core'
-require 'rspec/core/rake_task'
+begin
+  require 'rspec/core'
+  require 'rspec/core/rake_task'
+  task default: :test
+  desc 'Run specs'
+  RSpec::Core::RakeTask.new :test
+rescue LoadError
+end
 
-task default: :test
-
-desc 'Run specs'
-RSpec::Core::RakeTask.new :test
