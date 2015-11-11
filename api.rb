@@ -1,13 +1,7 @@
 require 'sinatra'
 require 'data_mapper'
 
-configure :development do
-  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/world_cities.db")
-end
-
-configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'])
-end
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/world_cities.db")
 
 require "#{Dir.pwd}/models/world_city.rb"
 
