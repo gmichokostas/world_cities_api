@@ -6,7 +6,7 @@ class WorldCity
   property :city_ascii, String,   length: 39
   property :lat,        Decimal,  precision: 9, scale: 7
   property :lng,        Decimal,  precision: 9, scale: 7
-  property :pop,        Decimal
+  property :pop,        Decimal,  precision: 9, scale: 7
   property :country,    String,   length: 32
   property :iso2,       String,   length: 3
   property :iso3,       String,   length: 3
@@ -15,9 +15,12 @@ class WorldCity
   def location
     {
       lat: format("%.7f", lat),
-      lng: format("%.7f", lng),
-      pop: format("%.0f", pop)
+      lng: format("%.7f", lng)
     }
+  end
+
+  def population
+    format("%.2f", pop)
   end
 
   DataMapper.finalize

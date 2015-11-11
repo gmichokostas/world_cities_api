@@ -11,14 +11,24 @@ get '/' do
 end
 
 get '/cities' do
-  content_type :json
+  content_type :json, 'charset' => 'utf-8'
 
   @cities = WorldCity.all
   @cities.to_json(
     only: [:id, :city, :city_ascii, :country, :iso2, :iso3, :province],
-    methods: :location
+    methods: [:location, :population]
   )
 end
+
+get '/cities/:id' do
+  content_type :json, 'charset' => 'utf-8'
+  @city = WorldCity.get(params[:id])
+  @city.to_json(
+    only: [:id, :city, :city_ascii, :country, :iso2, :iso3, :province],
+    methods: [:location, :population]
+  )
+end
+
 
 not_found do
   "<h1>Not Found</h1>"
