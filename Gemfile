@@ -18,4 +18,7 @@ group :test do
   gem 'byebug'
 end
 
-gem 'dm-postgres-adapter', group: :production
+group :production do
+  gem 'dm-postgres-adapter'
+  gem 'pg'
+end
