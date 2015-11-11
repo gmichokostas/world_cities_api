@@ -1,4 +1,7 @@
 language: ruby
+sudo: false
+env:
+  -DB=sqlite
 rvm:
   - 2.2.3
-bundler_args: --without production
+bundler_args: --without production debug
