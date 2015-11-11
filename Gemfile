@@ -5,7 +5,7 @@ gem 'sinatra'
 gem 'rack'
 gem 'rake'
 gem 'datamapper'
-gem 'dm-sqlite-adapter'
+gem 'dm-sqlite-adapter', group: [:test, :development]
 
 group :development do
   gem 'thin'
