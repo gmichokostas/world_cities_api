@@ -4,6 +4,9 @@ An example API in [sinatra](http://www.sinatrarb.com/)
 
 Database can be found [here](http://simplemaps.com/resources/world-cities-data) .
 
+There are available two databases, one is for a local machine with sqlite installed on it
+and the other for heroku.
+
 # API
 
 The API is located at [https://world-cities.herokuapp.com](https://world-cities.herokuapp.com).
