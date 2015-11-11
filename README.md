@@ -1,4 +1,4 @@
-# World Cities Latitude/Longitude API
+# World Cities Latitude/Longitude API  [![Build Status](https://travis-ci.org/gmichokostas/world_cities_api.svg)](https://travis-ci.org/gmichokostas/world_cities_api)
 
 An example API in [sinatra](http://www.sinatrarb.com/)
 
