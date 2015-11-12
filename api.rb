@@ -5,6 +5,10 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/world_ci
 
 require "#{Dir.pwd}/models/world_city.rb"
 
+before do
+  response['Access-Control-Allow-Origin'] = '*'
+end
+
 # helpers
 helpers do
   def jsonize(city)
