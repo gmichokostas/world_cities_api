@@ -22,7 +22,6 @@ end
 
 get '/cities' do
   content_type :json, 'charset' => 'utf-8'
-
   @cities = WorldCity.all
   jsonize @cities
 end
@@ -30,6 +29,12 @@ end
 get '/cities/:id' do
   content_type :json, 'charset' => 'utf-8'
   @city = WorldCity.get(params[:id])
+  jsonize @city
+end
+
+get '/cities/iso2/:iso2' do
+  content_type :json, 'charset' => 'utf-8'
+  @city = WorldCity.all(iso2: params[:iso2].upcase)
   jsonize @city
 end
 

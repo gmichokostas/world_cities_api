@@ -17,4 +17,6 @@ The following endpoints are available from the API:
 /cities
 
 /cities/:id
+
+/cities/iso2/:iso2
 ```
